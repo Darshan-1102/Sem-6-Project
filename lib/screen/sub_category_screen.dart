@@ -81,7 +81,7 @@ class _SubCategoryScreenState extends State<SubCategoryScreen> {
 
   saveImageToDb() async {
     EasyLoading.show();
-    var ref = storage.ref('subCategoryImage/$fileName)');
+    var ref = storage.ref('subCategoryImage/$fileName');
 
     try {
       String? mimiType = mime(basename(fileName!));
@@ -94,7 +94,7 @@ class _SubCategoryScreenState extends State<SubCategoryScreen> {
             data: {
               'subCatName': _subCatName.text,
               'mainCategory': _selectedValue,
-              'image': '$value.png',
+              'image': value,
               'active': true,
             },
             docName: _subCatName.text,
@@ -236,7 +236,6 @@ class _SubCategoryScreenState extends State<SubCategoryScreen> {
                   ),
                 ],
               )
-
             ],
           ),
           const Divider(color: Colors.grey),
@@ -248,7 +247,7 @@ class _SubCategoryScreenState extends State<SubCategoryScreen> {
               style: TextStyle(fontWeight: FontWeight.w700, fontSize: 18),
             ),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 5),
           CategoryListWidget(
             reference: _service.subCat,
           ),

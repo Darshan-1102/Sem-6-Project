@@ -38,7 +38,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
 
   saveImageToDb() async {
     EasyLoading.show();
-    var ref = storage.ref('categoryImage/$fileName)');
+    var ref = storage.ref('categoryImage/$fileName');
 
     try {
       await ref.putData(image);

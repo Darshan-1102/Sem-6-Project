@@ -58,11 +58,11 @@ class _CategoryListWidgetState extends State<CategoryListWidget> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SizedBox(
-                height: 60,
+                height: 70,
                 width: 150,
                 child: Image.network(
                   data['image'],
-                  fit: BoxFit.fitWidth,
+                  fit: BoxFit.fitHeight,
                 )),
             Text(
               widget.reference == service.categories
